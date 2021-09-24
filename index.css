@@ -1,11 +1,14 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto+Mono';
+/* Basic formatting */
 body{
 color: #222;
+margin: 0;
 }
 p{
     font-family: 'Roboto Mono', monospace;
     font-weight: 400;
     font-size:medium;
+    text-align: justify;
 }
 h1,
 h2,
@@ -15,22 +18,52 @@ h5,
 h6{
     font-family: 'Roboto Mono', monospace;
 }
+
 .logo{
+  padding-right: 1%;
     width: 180px;
     float:right;
 }
 .sitetitle{
-    float:left;
-    left: 25%;
+  text-align: center;
 }
+.sitetext{
+  padding-left:5%;
+  padding-right:5%;
+  position: relative;
+  top: 40%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.imagetext{
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 40px;
+  padding:4%;
+  padding-top: 1%;
+  margin: 5%;
+  color: rgb(255, 255, 255);
+  position: relative;
+  top: 45%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.backgroundimg{
+  max-width:100%;
+max-height:100%;
+}
+.sponsors{
+  
+}
+.sponsorsimg{
+  width: 100%;
+}
+/* Navigation bar */
 #navbar {
+  z-index: 9000;
     overflow: hidden;
     background-color: rgba(51, 51, 51, 0.5);
-    margin: -8px;
-    margin-top:0px;
+    margin-top: 1px;
   }
-  
-  /* Navbar links */
   #navbar a {
     font-family: 'Roboto Mono', monospace;
     float: left;
@@ -40,23 +73,18 @@ h6{
     padding: 14px;
     text-decoration: none;
   }
-  
-  /* Page content */
   .content {
     padding: 16px;
   }
-  
-  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
   .sticky {
     position: fixed;
     top: 0;
     width: 100%;
   }
-  
-  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
   .sticky + .content {
     padding-top: 60px;
   }
+  /*Fade in animations*/
   .fade-in-image {
     animation: fadeIn 2s;
     -webkit-animation: fadeIn 2s;
@@ -88,11 +116,9 @@ h6{
     0% {opacity:0;}
     100% {opacity:1;}
   }
-
-
-
-
+/*Modal for contacts*/
   .modal {
+    z-index: 10000;
   display: none;
   position: fixed;
   padding-top: 6%; 
@@ -102,7 +128,6 @@ h6{
   height: 100%; 
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.5);
-  overflow-y:scroll;
 }
 .modal-content {
   position: relative; 
@@ -110,7 +135,7 @@ h6{
   border-radius: 20px;
   padding: 20px; 
   margin: auto; 
-  width: 500px;
+  width: 450px;
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
@@ -132,4 +157,79 @@ h6{
 @keyframes animatetop {
   from {top:-300px; opacity:0}
   to {top:0; opacity:1}
+}
+/* Screen split*/
+@media only screen and (max-width: 1200px) {
+  .split {
+    height: 800px;
+  }
+  
+  /* Control the left side */
+  .left {
+    width: 100%
+  }
+  
+  /* Control the right side */
+  .right {
+    background-image: url('img/mars.jpg');
+    background-size: 100%;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+.split:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Control the left side */
+.left {
+  float: left;
+  width: 50%;
+  height: 800px;
+}
+
+/* Control the right side */
+.right {
+  background-image: url('img/mars.jpg');
+  background-size: 100%;
+  float: left;
+  width: 50%;
+  height: 800px;
+}
+}
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+.container {
+  background-color: rgb(192, 192, 192);
+  width: 100%;
+  border-radius: 15px;
+}
+.sponsoredmoney {
+  background-color: rgb(116, 194, 92);
+  color: white;
+  padding: 1%;
+  text-align: right;
+  font-size: 20px;
+      border-radius: 15px;
+}
+
+.baremoji {
+  width: 2%;
+}
+.bartext{
+  font-family: 'Roboto Mono', monospace;
 }
