@@ -16,7 +16,7 @@ h6{
     font-family: 'Roboto Mono', monospace;
 }
 .logo{
-    width: 160px;
+    width: 180px;
     float:left;
 }
 .sitetitle{
@@ -32,6 +32,7 @@ h6{
   
   /* Navbar links */
   #navbar a {
+    font-family: 'Roboto Mono', monospace;
     float: left;
     display: block;
     color: #f2f2f2;
