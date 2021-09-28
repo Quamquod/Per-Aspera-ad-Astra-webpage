@@ -7,7 +7,7 @@
   </head>
   <body>
     <div id="navbar">
-      <span class="logospan"><a class="logolink" href="https://www.gamca.sk/"><img class="logoimg" src="https://raw.githubusercontent.com/Quamquod/webpage-files/main/gamcalight.svg" alt="logo"></a></span>
+      <span class="logospan"><a class="logolink" href="https://www.gamca.sk/"><img class="logoimg" src="img/gamcalight.svg" alt="logo"></a></span>
       <a id="modal-btn">Kontakt</a>
     </div>
     <div class="modal">
@@ -16,7 +16,8 @@
         <h1>Kontakt</h1>
         <p>Mgr. Viera Babišová (riaditeľka školy)<br>e-mail: babisova1@gamca.sk</p><br>
         <p>RNDr. Petra Kořanová (učiteľka)<br>e-mail: koranova1@gamca.sk</p><br>
-        <p>Adresa:<br>Gymnázium, Grösslingová 18, 811 09 Bratislava</p>
+        <p>Adresa:<br>Gymnázium, Grösslingová 18, 811 09 Bratislava<br></p>
+        <p>Účet:</p>
       </div>
     </div>
     <div class="container">
@@ -24,19 +25,13 @@
         <div class="box">
           <p><span style="font-weight: bold; font-size: larger; color: #0986bb;">Dokážu morské riasy prežiť na Marse?<br></span>
             <span style="font-weight: bold; font-size: larger; color: #b69100;">S čím všetkým by nám na Marse vedeli pomôcť?<br></span>
-            Sme študenti Gymnázia Grösslingová v Bratislave,
-            ktorí sa s podporou Dr. Michealy Musilovej snažia na
-            predmetné otázky nájsť odpovede podložené
-            priamymi vedeckými dôkazmi.<br>
-            Keďže náš výskum je priamo spätý s návštevou
-            vesmírnej stanice HI-SEAS dovoľujeme si Vás požiadať
-            o finančnú podporu. .....</p>
+            V mene študentov nášho gymnázia si Vás dovoľujeme požiadať o podporu ich výskumného projektu, a to formou finančného prostriedku. Oslovujeme Vás, nakoľko veríme, že aj Vám záleží na budúcnosti vzdelávania. Naši študenti dostali možnosť vytvoriť projekt týkajúci sa výskumu a prežitia ľudí na planéte Mars. Ten sa môže dokonca zrealizovať na jednej zo simulovaných misií pod záštitou Dr. Michaely Musilovej. Vedecký projekt bol úspešne obhájený a plánujeme ho dopraviť na stanicu HI-SEAS v januári 2022. Vzhľadom na stanovené ciele projektu sú však pre jeho plnú realizáciu nevyhnutné finančné prostriedky, o ktoré vás žiadame aj týmto prostriedkom.
         </div>
         <div class="box">
-          <p>Potrebné finančné prostriedky pre plnú realizáciu projektu: <br>
-            <span style="color:rgb(136, 18, 42);">cieľová suma: <span style="font-size: larger;">8 000 EUR</span><br></span>
-            <span style="font-size:xx-small;">predmetná suma zahŕňa:&nbsp;&nbsp;&nbsp;  cestovné
-            náklady, ubytovanie a poplatky stanovené vesmírnou stanicou HI-SEAS<br></span>
+          <p>Našim cieľom je zozbierať 8 000 eur na pokrytie nákladov na cestu na stanicu HI-SEAS a jej návštevu. Položky ako víza alebo poistenie si vieme uhradiť aj sami, ale na letenky nám už financie nevystačia. V tomto bode sa obraciame na Vašu pomoc. Príspevky nám môžete posielať na účet uvedený v časti <a id="link-btn">Kontakt</a>.
+            <br>
+            <span style="color:rgb(177, 0, 35);">cieľová suma: <span style="font-size: larger;">8 000 EUR</span><br></span>
+            <i style="font-size: smaller;">(predmetná suma zahŕňa: cestovné náklady, ubytovanie a poplatky stanovené vesmírnou stanicou HI-SEAS)<br></i>
             vyzbieraných:
           </p>
           <div class="bartext"><span style="color:darkgreen; font-size: larger;font-weight: bold;">0€</span>/8 000€</div>
@@ -51,7 +46,7 @@
         </div>
         <div class="box">
           <h2 class="texttitle">Kto nás podporil:</h1>
-          <img class="sponsorsimg" src="https://github.com/Quamquod/webpage-files/blob/main/sponsors.png?raw=true" alt="sponzori">
+          <img class="sponsorsimg" src="img/sponsors.png" alt="sponzori">
         </div>
       </div>
     </div>
@@ -77,9 +72,13 @@ navbar.classList.remove("sticky");
   </script>
   <script>
     let modalBtn = document.getElementById("modal-btn")
+    let linkBtn = document.getElementById("link-btn")
 let modal = document.querySelector(".modal")
 let closeBtn = document.querySelector(".close-btn")
 modalBtn.onclick = function(){
+modal.style.display = "block"
+}
+linkBtn.onclick = function(){
 modal.style.display = "block"
 }
 closeBtn.onclick = function(){

@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo&display=swap');
 body{
   background-color: black;
-    background-image: url('https://github.com/Quamquod/webpage-files/blob/main/mars.jpg?raw=true');
+    background-image: url('img/mars.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -65,6 +65,11 @@ p{
     cursor:pointer;
     padding: 14.5px;
     font-family: 'Exo', sans-serif;
+}
+#link-btn{
+  cursor:pointer;
+  color: blue;
+  text-decoration: underline;
 }
 .logolink{
     line-height: 0px;
